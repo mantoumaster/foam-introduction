@@ -1,4 +1,4 @@
-![foam2.png](imgs/foam2.png)
+<img src="imgs/foam2.png" alt="jpg name" width="60%"/>
 
 # 🫧 Foam — Emby 管理系统
 
