@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="imgs/foam2.png" alt="jpg name" width="60%"/>
+    <img src="imgs/foam2.png" alt="jpg name" width="30%"/>
 </div>
 
 # 🫧 Foam — Emby 管理系统
