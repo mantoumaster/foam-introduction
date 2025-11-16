@@ -1,4 +1,6 @@
-# 🌊 Foam — Emby 管理系统
+![foam2.png](imgs/foam2.png)
+
+# 🫧 Foam — Emby 管理系统
 
 ## 📌 版本信息（Version）
 
