@@ -7,7 +7,7 @@
 ## 📌 版本信息（Version）
 
 - 当前版本：**latest**
-- 更新日志详见：[`CHANGELOG.md`](./CHANGELOG.md)
+- 更新日志详见：[`版本更新`](./CHANGELOG.md)
 
 ---
 
