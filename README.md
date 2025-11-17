@@ -61,6 +61,8 @@ services:
       - LICENSE_FILE=/data/license.dat
       # 搜索接口地址 pansou地址
       - EMBY_HUB_SEARCH_URL=
+      #上传头像访问地址 也就是8080端口 需要外网能访问的ip
+      - AVATARS_BASE_URL="http://localhost:8080"
     networks:
       - foam-network
     links:
