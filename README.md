@@ -46,9 +46,6 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/foam-api?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=password
-      - EMBY_APIKEY=apikey
-      - EMBY_URL=http://ip:port/emby/
-      - EMBY_COPYFROMUSERID=复制emby用户id # 复制emby用户权限
       # 需要配置tmdb接口hosts
       - TMDB_APITOKEN=tmdb api token
       - TMDB_APIKEY=tmdb api key
