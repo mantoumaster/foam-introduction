@@ -120,6 +120,14 @@ networks:
 docker-compose up -d
 ```
 
+### 添加Emby入库通知
+
+登录Emby管理后台，点击左侧导航栏的`系统` -> `通知` -> `添加通知` -> `Webhooks`
+
+输入地址http://ip:8080/emby/notifier
+
+勾选application/json 添加媒体库 播放行为 用户验证等
+
 访问：http://localhost:8081
 
 ## 🎨 系统界面展示
@@ -167,6 +175,24 @@ docker-compose up -d
 ### 🖼️ 仪表盘
 
 ![](imgs/仪表盘.png)
+
+![](imgs/仪表盘2.png)
+
+### 🖼️ 今日排行
+
+![](imgs/今日排行.jpg)
+
+### 🖼️ 开始播放
+
+![](imgs/开始播放.png)
+
+### 🖼️ 停止播放
+
+![](imgs/停止播放.png)
+
+### 🖼️ 入库通知
+
+![](imgs/入库通知.png)
 
 ## 🧩 系统功能说明
 
