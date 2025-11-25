@@ -126,6 +126,10 @@ docker-compose up -d
 
 勾选application/json 添加媒体库 播放行为 用户验证等
 
+### 添加MoviePilot配置
+
+系统配置 ->moviepilot配置
+
 访问：http://localhost:8081
 
 ## 🎨 系统界面展示
