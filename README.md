@@ -21,6 +21,7 @@
 - 🎬 影片请求中心
 - 📱 完美适配移动端
 - 🛥 支持多Emby服切换
+- 🎯 求片自动关联MoviePilot订阅
 
 ## [🚀 点击前往 Foam 群组聊天](https://t.me/FoamHub)
 
@@ -190,6 +191,10 @@ docker-compose up -d
 ### 🖼️ 入库通知
 
 ![](imgs/入库通知.png)
+
+### 🖼️ 求片自动关联MoviePilot订阅
+
+![求片订阅.png](imgs/求片订阅.png)
 
 ## 🧩 系统功能说明
 
