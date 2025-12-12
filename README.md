@@ -45,6 +45,12 @@ services:
       - "8080:8080"
     volumes:
       - ./data:/data
+      # 配置hosts 否则无法访问tmdb接口
+      # 18.161.6.73 api.themoviedb.org
+      # 18.161.6.73 api.tmdb.org
+      # 18.161.6.73 www.themoviedb.org
+      # 18.161.6.73 api.thetvdb.com
+      # 104.19.223.128 api.nullbr.eu.org
       - /etc/hosts:/etc/hosts
     container_name: foam-api
     restart: always
@@ -52,7 +58,10 @@ services:
       #db:3306 使用的是容器内部的端口 不是映射完的端口
       - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/foam-api?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
       - SPRING_DATASOURCE_USERNAME=root
-      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_DATASOURCE_PASSWORD=78FRC#5BqnOk0ppk
+#      - EMBY_APIKEY=apikey
+#      - EMBY_URL=http://ip:port/emby/
+#      - EMBY_COPYFROMUSERID=复制emby用户id # 复制emby用户权限
       # 需要配置tmdb接口hosts
       - TMDB_APITOKEN=tmdb api token
       - TMDB_APIKEY=tmdb api key
@@ -62,7 +71,7 @@ services:
       - HTTP_PROXY_ENABLED=true
       - HTTP_PROXY=http://ip:port
       - HTTPS_PROXY=http://ip:port
-      - NO_PROXY=172.17.0.1,127.0.0.1,localhost,foam-api-search
+      - NO_PROXY=172.17.0.1,127.0.0.1,localhost,foam-api-search,selenium-chrome
       # lisence配置文件
       - LICENSE_FILE=/data/license.dat
       # 搜索接口地址 pansou地址
@@ -73,14 +82,16 @@ services:
       - foam-network
     links:
       - db
+      - selenium-chrome
     depends_on:
       - db
+      - selenium-chrome
 
   db:
     image: mysql:8.4.6
     container_name: mysql_container
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: 78FRC#5BqnOk0ppk
       MYSQL_DATABASE: foam-api
       TZ: "Asia/Shanghai"
       LANG: en_US.UTF-8
@@ -113,6 +124,18 @@ services:
       - foam-api
     depends_on:
       - foam-api
+        
+  selenium-chrome:
+    image: selenium/standalone-chrome:latest
+    platform: linux/amd64
+    ports:
+      - "4444:4444"
+      - "7900:7900"
+    shm_size: "2gb"
+    environment:
+      - SE_NODE_MAX_SESSIONS=4
+    networks:
+      - foam-network
 
 networks:
   foam-network:
