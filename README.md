@@ -78,6 +78,7 @@ services:
       - EMBY_HUB_SEARCH_URL=
       #上传头像访问地址 也就是8080端口 需要外网能访问的ip
       - AVATARS_BASE_URL=http://localhost:8080
+      - SELENIUM_REMOTE_URL=http://selenium-chrome:4444/wd/hub
     networks:
       - foam-network
     links:
