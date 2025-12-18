@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[**📖 项目介绍**](./README.md) &nbsp;|&nbsp; [**🚀 部署教程**](./DEPLOY.md) &nbsp;|&nbsp; [**🎨 界面预览**](./PREVIEW.md)
+[![项目介绍](https://img.shields.io/badge/📖_项目介绍-grey?style=for-the-badge&logoColor=white)](./README.md) [![部署教程](https://img.shields.io/badge/🚀_部署教程-FC5531?style=for-the-badge&logoColor=white)](./DEPLOY.md) [![界面预览](https://img.shields.io/badge/🎨_界面预览-grey?style=for-the-badge&logoColor=white)](./PREVIEW.md)
 
 </div>
 
