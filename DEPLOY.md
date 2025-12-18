@@ -1,4 +1,14 @@
+<div align="center">
+    <img src="imgs/foam2.png" alt="jpg name" width="30%"/>
+</div>
+
 # 🚀 部署方式
+
+<div align="center">
+
+[**📖 项目介绍**](./README.md) &nbsp;|&nbsp; [**🚀 部署教程**](./DEPLOY.md) &nbsp;|&nbsp; [**🎨 界面预览**](./PREVIEW.md)
+
+</div>
 
 ## 本地运行
 

@@ -4,18 +4,16 @@
 
 # 🫧 Foam — Emby 管理系统
 
+<div align="center">
+
+[**📖 项目介绍**](./README.md) &nbsp;|&nbsp; [**🚀 部署教程**](./DEPLOY.md) &nbsp;|&nbsp; [**🎨 界面预览**](./PREVIEW.md)
+
+</div>
+
 ## 📌 版本信息（Version）
 
 - 当前版本：**latest**
 - 更新日志详见：[`版本更新`](./CHANGELOG.md)
-
----
-
-## 📚 文档导航
-
-- **[📖 项目介绍](#-功能亮点)**
-- **[🚀 部署教程](./DEPLOY.md)**
-- **[🎨 界面预览](./PREVIEW.md)**
 
 ---
 
