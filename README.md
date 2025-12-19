@@ -38,6 +38,8 @@
 
 ## [🚀 点击前往 Foam 群组聊天](https://t.me/FoamHub)
 
+![欢迎回来.png](imgs/%E6%AC%A2%E8%BF%8E%E5%9B%9E%E6%9D%A5.png)
+
 ## 🧩 系统功能说明
 
 ### 👥 用户管理
