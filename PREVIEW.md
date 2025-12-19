@@ -101,3 +101,15 @@
 ## 🛺 企业微信应用
 
 ![企业微信应用.png](imgs/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E5%BA%94%E7%94%A8.png)
+
+## 🛺 邀请系统
+
+![邀请系统.png](imgs/%E9%82%80%E8%AF%B7%E7%B3%BB%E7%BB%9F.png)
+
+## 🛺 开始播放
+
+![开始播放.jpg](imgs/%E5%BC%80%E5%A7%8B%E6%92%AD%E6%94%BE.jpg)
+
+## 🛺 暂停播放
+
+![暂停播放.jpg](imgs/%E6%9A%82%E5%81%9C%E6%92%AD%E6%94%BE.jpg)
