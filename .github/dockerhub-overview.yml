@@ -1,0 +1,23 @@
+name: Sync Docker Hub Overview
+
+on:
+  push:
+    branches: [ "main" ]   # 如果你的默认分支是 master，就改成 master
+    paths:
+      - "README.md"
+      - ".github/workflows/dockerhub-overview.yml"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update Docker Hub repository overview
+        uses: peter-evans/dockerhub-description@v5
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          repository: ciwei123321/foam
+          short-description: "Foam — Emby 管理系统：用户管理/统计/通知/卡密续费/求片中心/多服切换"
