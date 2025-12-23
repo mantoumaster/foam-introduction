@@ -80,36 +80,40 @@
 
 ![求片订阅.png](imgs/求片订阅.png)
 
-## 🛺 支持自定义入库图片
+## 🖌️ 支持自定义入库图片
 
 ![自定义横版.jpg](imgs/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%AA%E7%89%88.jpg)
 
 ![自定义竖版.jpg](imgs/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AB%96%E7%89%88.jpg)
 
-## 🛺 屏蔽播放设备
+## 🚫 屏蔽播放设备
 
 ![屏蔽播放设备.png](imgs/%E5%B1%8F%E8%94%BD%E6%92%AD%E6%94%BE%E8%AE%BE%E5%A4%87.png)
 
-## 🛺 机器人操作面板
+## 🤖 机器人操作面板
 
 ![机器人操作面板.png](imgs/%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%93%8D%E4%BD%9C%E9%9D%A2%E6%9D%BF.png)
 
-## 🛺 emby服务器用户同步
+## 🔄 emby服务器用户同步
 
-![emby服务器用户同步.png](imgs/emby%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8%E6%88%B7%E5%90%8C%E6%AD%A5.png)
+![emby服务器用户同步.png](imgs/%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%93%8D%E4%BD%9C%E9%9D%A2%E6%9D%BF.png)
 
-## 🛺 企业微信应用
+## 🏢 企业微信应用
 
 ![企业微信应用.png](imgs/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E5%BA%94%E7%94%A8.png)
 
-## 🛺 邀请系统
+## 🎟️ 邀请系统
 
 ![邀请系统.png](imgs/%E9%82%80%E8%AF%B7%E7%B3%BB%E7%BB%9F.png)
 
-## 🛺 开始播放
+## ▶️ 开始播放
 
 ![开始播放.jpg](imgs/%E5%BC%80%E5%A7%8B%E6%92%AD%E6%94%BE.jpg)
 
-## 🛺 暂停播放
+## ⏸️ 暂停播放
 
 ![暂停播放.jpg](imgs/%E6%9A%82%E5%81%9C%E6%92%AD%E6%94%BE.jpg)
+
+## 🧩 积分系统
+
+![积分系统.png](imgs/%E7%A7%AF%E5%88%86%E7%B3%BB%E7%BB%9F.png)
