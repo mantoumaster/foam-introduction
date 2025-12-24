@@ -1,119 +1,266 @@
 <div align="center">
-    <img src="imgs/foam2.png" alt="jpg name" width="30%"/>
+  <img src="imgs/foam2.png" alt="Foam" width="30%"
+    style="border-radius:18px; box-shadow:0 14px 40px rgba(0,0,0,.28);" />
 </div>
 
 # 🎨 系统界面展示
 
 <div align="center">
 
-[![项目介绍](https://img.shields.io/badge/📖_项目介绍-grey?style=for-the-badge&logoColor=white)](./README.md) [![部署教程](https://img.shields.io/badge/🚀_部署教程-grey?style=for-the-badge&logoColor=white)](./DEPLOY.md) [![界面预览](https://img.shields.io/badge/🎨_界面预览-FC5531?style=for-the-badge&logoColor=white)](./PREVIEW.md)
+[![项目介绍](https://img.shields.io/badge/📖_项目介绍-grey?style=for-the-badge&logoColor=white)](./README.md)
+[![部署教程](https://img.shields.io/badge/🚀_部署教程-grey?style=for-the-badge&logoColor=white)](./DEPLOY.md)
+[![界面预览](https://img.shields.io/badge/🎨_界面预览-FC5531?style=for-the-badge&logoColor=white)](./PREVIEW.md)
 
 </div>
 
-## 🖼️ 系统公告
+## 🧱 海报墙预览
 
-![](imgs/系统公告.png)
+<table>
+  <tr>
+    <td align="center">
+      <a href="imgs/系统公告.png">
+        <img src="imgs/系统公告.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>系统公告</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/主题中心.png">
+        <img src="imgs/主题中心.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>主题中心</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/赛博朋克主题.png">
+        <img src="imgs/赛博朋克主题.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>赛博朋克主题</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/求片管理.png">
+        <img src="imgs/求片管理.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>求片管理</b></sub>
+    </td>
+  </tr>
 
-## 🖼️ 主题中心
+  <tr>
+    <td align="center">
+      <a href="imgs/求片管理入库.png">
+        <img src="imgs/求片管理入库.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>求片管理入库</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/播放统计.png">
+        <img src="imgs/播放统计.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>播放统计</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/系统配置.png">
+        <img src="imgs/系统配置.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>系统配置</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/卡密管理.png">
+        <img src="imgs/卡密管理.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>卡密管理</b></sub>
+    </td>
+  </tr>
 
-![](imgs/主题中心.png)
+  <tr>
+    <td align="center">
+      <a href="imgs/播放汇总.png">
+        <img src="imgs/播放汇总.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>播放汇总</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/媒体库.png">
+        <img src="imgs/媒体库.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>媒体库</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/求片中心.png">
+        <img src="imgs/求片中心.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>求片中心</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/用户管理.png">
+        <img src="imgs/用户管理.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>用户管理</b></sub>
+    </td>
+  </tr>
 
-![赛博朋克主题.png](imgs/%E8%B5%9B%E5%8D%9A%E6%9C%8B%E5%85%8B%E4%B8%BB%E9%A2%98.png)
+  <tr>
+    <td align="center">
+      <a href="imgs/仪表盘.png">
+        <img src="imgs/仪表盘.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>仪表盘</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/仪表盘2.png">
+        <img src="imgs/仪表盘2.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>仪表盘2</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/今日排行.jpg">
+        <img src="imgs/今日排行.jpg" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>今日排行</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/开始播放.png">
+        <img src="imgs/开始播放.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>开始播放</b></sub>
+    </td>
+  </tr>
 
-## 🖼️ 求片管理
+  <tr>
+    <td align="center">
+      <a href="imgs/停止播放.png">
+        <img src="imgs/停止播放.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>停止播放</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/入库通知.png">
+        <img src="imgs/入库通知.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>入库通知</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/求片订阅.png">
+        <img src="imgs/求片订阅.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>求片订阅</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/自定义横版.jpg">
+        <img src="imgs/自定义横版.jpg" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>自定义横版</b></sub>
+    </td>
+  </tr>
 
-![](imgs/求片管理.png)
+  <tr>
+    <td align="center">
+      <a href="imgs/自定义竖版.jpg">
+        <img src="imgs/自定义竖版.jpg" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>自定义竖版</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/屏蔽播放设备.png">
+        <img src="imgs/屏蔽播放设备.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>屏蔽播放设备</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/机器人操作面板.png">
+        <img src="imgs/机器人操作面板.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>机器人操作面板</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/emby服务器用户同步.png">
+        <img src="imgs/emby服务器用户同步.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>用户同步</b></sub>
+    </td>
+  </tr>
 
-![求片管理入库.png](imgs/%E6%B1%82%E7%89%87%E7%AE%A1%E7%90%86%E5%85%A5%E5%BA%93.png)
+  <tr>
+    <td align="center">
+      <a href="imgs/企业微信应用.png">
+        <img src="imgs/企业微信应用.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>企业微信应用</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/邀请系统.png">
+        <img src="imgs/邀请系统.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>邀请系统</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/开始播放.jpg">
+        <img src="imgs/开始播放.jpg" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>开始播放(手机)</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/暂停播放.jpg">
+        <img src="imgs/暂停播放.jpg" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>暂停播放(手机)</b></sub>
+    </td>
+  </tr>
 
-## 🖼️ 播放统计
-
-![](imgs/播放统计.png)
-
-## 🖼️ 系统配置
-
-![](imgs/系统配置.png)
-
-## 🖼️ 卡密管理
-
-![](imgs/卡密管理.png)
-
-## 🖼️ 播放汇总
-
-![](imgs/播放汇总.png)
-
-## 🖼️ 媒体库
-
-![](imgs/媒体库.png)
-
-## 🖼️ 求片中心
-
-![](imgs/求片中心.png)
-
-## 🖼️ 用户管理
-
-![](imgs/用户管理.png)
-
-## 🖼️ 仪表盘
-
-![](imgs/仪表盘.png)
-
-![](imgs/仪表盘2.png)
-
-## 🖼️ 今日排行
-
-![](imgs/今日排行.jpg)
-
-## 🖼️ 开始播放
-
-![](imgs/开始播放.png)
-
-## 🖼️ 停止播放
-
-![](imgs/停止播放.png)
-
-## 🖼️ 入库通知
-
-![](imgs/入库通知.png)
-
-## 🖼️ 求片自动关联MoviePilot订阅
-
-![求片订阅.png](imgs/求片订阅.png)
-
-## 🖌️ 支持自定义入库图片
-
-![自定义横版.jpg](imgs/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%AA%E7%89%88.jpg)
-
-![自定义竖版.jpg](imgs/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AB%96%E7%89%88.jpg)
-
-## 🚫 屏蔽播放设备
-
-![屏蔽播放设备.png](imgs/%E5%B1%8F%E8%94%BD%E6%92%AD%E6%94%BE%E8%AE%BE%E5%A4%87.png)
-
-## 🤖 机器人操作面板
-
-![机器人操作面板.png](imgs/%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%93%8D%E4%BD%9C%E9%9D%A2%E6%9D%BF.png)
-
-## 🔄 emby服务器用户同步
-
-![emby服务器用户同步.png](imgs/emby%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%94%A8%E6%88%B7%E5%90%8C%E6%AD%A5.png)
-
-## 🏢 企业微信应用
-
-![企业微信应用.png](imgs/%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E5%BA%94%E7%94%A8.png)
-
-## 🎟️ 邀请系统
-
-![邀请系统.png](imgs/%E9%82%80%E8%AF%B7%E7%B3%BB%E7%BB%9F.png)
-
-## ▶️ 开始播放
-
-![开始播放.jpg](imgs/%E5%BC%80%E5%A7%8B%E6%92%AD%E6%94%BE.jpg)
-
-## ⏸️ 暂停播放
-
-![暂停播放.jpg](imgs/%E6%9A%82%E5%81%9C%E6%92%AD%E6%94%BE.jpg)
-
-## 🧩 积分系统
-
-![积分系统.png](imgs/%E7%A7%AF%E5%88%86%E7%B3%BB%E7%BB%9F.png)
+  <tr>
+    <td align="center">
+      <a href="imgs/积分系统.png">
+        <img src="imgs/积分系统.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>积分系统</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/系统公告.png">
+        <img src="imgs/系统公告.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>系统公告</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/主题中心.png">
+        <img src="imgs/主题中心.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>主题中心</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/仪表盘.png">
+        <img src="imgs/仪表盘.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>仪表盘</b></sub>
+    </td>
+  </tr>
+</table>
