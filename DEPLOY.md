@@ -22,12 +22,6 @@ services:
       - "8080:8080"
     volumes:
       - ./data:/data
-      # 配置hosts 否则无法访问tmdb接口
-      # 18.161.6.73 api.themoviedb.org
-      # 18.161.6.73 api.tmdb.org
-      # 18.161.6.73 www.themoviedb.org
-      # 18.161.6.73 api.thetvdb.com
-      # 104.19.223.128 api.nullbr.eu.org
       - /etc/hosts:/etc/hosts
     container_name: foam-api
     restart: always
@@ -36,9 +30,6 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/foam-api?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=78FRC#5BqnOk0ppk
-#      - EMBY_APIKEY=apikey
-#      - EMBY_URL=http://ip:port/emby/
-#      - EMBY_COPYFROMUSERID=复制emby用户id # 复制emby用户权限
       # 需要配置tmdb接口hosts
       - TMDB_APITOKEN=tmdb api token
       - TMDB_APIKEY=tmdb api key
@@ -149,7 +140,9 @@ docker-compose up -d
 
 Foam管理后台通知渠道-> 企业微信机器人-> 粘贴webhook地址-> 保存
 
-### 🛠️ **如何获取企业微信参数** (企业微信应用)
+### 添加企业微信应用通知（企业微信应用）
+
+#### 🛠️ **如何获取企业微信参数** (企业微信应用)
 
 #### 🏢 **1. 企业 ID (`corpId`)**
 > 🔑 这是你整个企业微信组织的唯一标识。
@@ -172,16 +165,30 @@ Foam管理后台通知渠道-> 企业微信机器人-> 粘贴webhook地址-> 保
 3.  **EncodingAESKey**：点击 **随机获取** 按钮（如 `X123...`）。
 4.  **注意**：在这个页面你还需要填写 **URL**（回调地址 机器人/应用回调地址指向 `https://<your-domain>/wechat/bot`），确保你的服务已经启动并能被外网访问，点击"保存"时企业微信会发送请求验证这个 Token 和 Key。
 
-#### ✅ **配置汇总**
-
-| 参数名 | 对应后台位置 | 说明 |
-| :--- | :--- | :--- |
-| `corpId` | 我的企业 -> 企业信息 | 企业唯一ID |
-| `agentId` | 应用管理 -> 应用详情 | 机器人的ID |
-| `appSecret` | 应用管理 -> 应用详情 | 机器人的密钥 (需扫码查看) |
-| `token` | 应用管理 -> 接收消息 -> API接收 | 用于验证回调请求 |
-| `encodingAesKey` | 应用管理 -> 接收消息 -> API接收 | 用于加密消息内容 |
-
 ### 积分系统
 
-添加通知渠道->积分机器人->新建机器人->进入群聊成为管理员->使用命令操作机器人就行
+添加通知渠道->积分机器人->新建机器人（自行百度）->进入群聊成为管理员->使用命令操作机器人就行
+
+> 部分命令参考
+
+积分可以配置对应奖品 兑换服务器 续费服务器等 这个完全是管理员控制的 推荐公益服使用
+
+```shell
+基础命令
+/checkin - 每日签到
+/points - 查询积分
+/leaderboard - 积分排行榜
+/transfer - 积分互转 (用法: /transfer @用户 积分)
+
+抽奖与娱乐
+/lottery - 抽奖 (支持 publish 发布, join 参与, status 查看状态)
+/blackjack - 🃏 21点游戏 (别名: /bj)
+/dice - 🎲 骰子比大小
+/slots - 🎰 老虎机
+
+兑换与服务
+/exchange - 查看可兑换项目 (列出所有可兑换的 Emby 账号/时长等)
+/prizes - 积分奖品列表 (列出实物或虚拟奖品)
+/redeem - 积分兑换账号 (用法: /redeem 配置编号 Emby用户名)
+/renew - 积分续期账号 (用法: /renew Emby用户名|天数，通常需管理员权限或特殊配置)
+```
