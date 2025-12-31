@@ -263,4 +263,22 @@
       <sub><b>仪表盘</b></sub>
     </td>
   </tr>
+
+<tr>
+    <td align="center">
+      <a href="imgs/追剧1.png">
+        <img src="imgs/追剧1.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>追剧1</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/追剧2.png">
+        <img src="imgs/追剧2.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>追剧2</b></sub>
+    </td>
+</tr>
+
 </table>
