@@ -71,7 +71,7 @@ docker compose down
 
 ## 部署方式二
 
-🎯 手动部署
+🎯 手动部署（不建议没基础的用户使用）
 
 docker-compose 本地运行
 
