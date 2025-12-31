@@ -10,7 +10,70 @@
 
 </div>
 
-## 本地运行
+## 部署方式一
+
+🎯 一键部署脚本（推荐）
+
+使用交互式脚本快速生成 `docker-compose.yml` 配置文件，无需手动编辑配置。
+
+### 使用方法
+
+**方式一：直接运行远程脚本**
+
+```bash
+# 创建部署目录并进入
+mkdir -p foam && cd foam
+
+# 下载并运行脚本
+curl -fsSL https://raw.githubusercontent.com/ciweigg2/foam-introduction/main/sh/foam-setup.sh | bash
+```
+
+**方式二：下载后运行**
+
+```bash
+# 创建部署目录并进入
+mkdir -p foam && cd foam
+
+# 下载脚本
+curl -fsSL -o foam-setup.sh https://raw.githubusercontent.com/ciweigg2/foam-introduction/main/sh/foam-setup.sh
+
+# 添加执行权限
+chmod +x foam-setup.sh
+
+# 运行脚本
+./foam-setup.sh
+```
+
+### 运行完成后
+
+脚本会自动在当前目录生成 `docker-compose.yml` 文件，并创建所需的数据目录。
+
+```bash
+# 启动服务
+docker compose up -d
+
+# 查看日志
+docker compose logs -f --tail=200
+
+# 停止服务
+docker compose stop
+
+# 重启服务
+docker compose restart
+
+# 删除服务（保留数据）
+docker compose down
+```
+
+访问地址：`http://localhost:8081`（或你配置的 Web 端口）
+
+---
+
+## 部署方式二
+
+🎯 手动部署
+
+docker-compose 本地运行
 
 ```shell
 version: '3'
