@@ -1,0 +1,88 @@
+name: "🐞 Bug 反馈 / Bug Report"
+description: "提交异常、错误、崩溃、显示问题"
+title: "[BUG]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请提供可复现信息：步骤、期望与实际、环境与日志。截图可直接拖拽上传。
+
+  - type: input
+    id: module
+    attributes:
+      label: 模块/页面（必填）
+      placeholder: "例如：通知模板中心"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤（必填）
+      placeholder: "1.\n2.\n3."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果（必填）
+      placeholder: "期望看到什么结果？"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果（必填）
+      placeholder: "实际发生了什么？错误提示是什么？"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 严重程度（必填）
+      options:
+        - S0（崩溃/数据丢失/安全风险）
+        - S1（核心功能不可用）
+        - S2（功能可用但体验差/有绕过方案）
+        - S3（小问题/显示瑕疵）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: client
+    attributes:
+      label: 发生端（必填）
+      options:
+        - PC Web
+        - Mobile Web
+        - App/uni-app
+        - 后端接口
+        - 其他
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 版本号/镜像 tag（可选）
+      description: 例如 v2.2
+      placeholder: "例如：v2.2"
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志/报错信息（可选）
+      render: shell
+      placeholder: "贴关键日志，注意打码敏感信息"
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 提交前确认（必填）
+      options:
+        - label: 我已搜索过 Issues，确认不是重复问题
+          required: true

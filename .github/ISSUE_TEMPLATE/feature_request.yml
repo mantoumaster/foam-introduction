@@ -1,0 +1,74 @@
+name: "✨ 需求提交 / Feature Request"
+description: "提交新需求、优化建议、UI改进"
+title: "[FR]: "
+labels: ["feature", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请尽量写清楚：现状/痛点/期望效果/边界条件。截图可直接拖拽上传。
+
+  - type: input
+    id: module
+    attributes:
+      label: 模块/页面（必填）
+      description: 例如：用户管理 / 求片中心 / 通知模板中心 / Dashboard
+      placeholder: "例如：求片中心"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 现状与痛点（必填）
+      placeholder: "现在……导致……（最好描述具体场景）"
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 期望方案/效果（必填）
+      placeholder: "期望……（交互、规则、边界条件、示例数据）"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级（必填）
+      options:
+        - P0（阻塞使用）
+        - P1（重要，尽快）
+        - P2（一般）
+        - P3（不急）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: client
+    attributes:
+      label: 影响端（必填）
+      options:
+        - PC Web
+        - Mobile Web
+        - App/uni-app
+        - 后端接口
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: refs
+    attributes:
+      label: 截图/参考链接/补充说明
+      description: 可直接拖拽截图到输入框
+      placeholder: "贴链接或补充说明"
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: 提交前确认（必填）
+      options:
+        - label: 我已搜索过 Issues，确认没有重复
+          required: true

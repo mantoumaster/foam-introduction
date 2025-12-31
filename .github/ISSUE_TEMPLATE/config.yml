@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "💬 讨论区（可选）"
+    url: "https://github.com/ciweigg2/foam-introduction/discussions"
+    about: "不确定是需求还是问题？先来讨论一下"
