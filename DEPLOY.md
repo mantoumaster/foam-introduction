@@ -173,7 +173,7 @@ networks:
   foam-network:
 ```
 
-## 🐳 Docker 部署
+### 🐳 Docker 部署
 
 ```shell
 docker-compose up -d
