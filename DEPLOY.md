@@ -255,3 +255,13 @@ Foam管理后台通知渠道-> 企业微信机器人-> 粘贴webhook地址-> 保
 /redeem - 积分兑换账号 (用法: /redeem 配置编号 Emby用户名)
 /renew - 积分续期账号 (用法: /renew Emby用户名|天数，通常需管理员权限或特殊配置)
 ```
+
+## 播放统计
+
+### 基于算法
+
+系统播放统计是根据算法统计的（不基于Playback Reporting插件）
+
+### 基于Playback Reporting插件（如果获取不到数据 安装插件就行）
+
+部分功能可以基于Playback Reporting插件实现的
