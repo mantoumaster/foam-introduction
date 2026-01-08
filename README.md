@@ -17,6 +17,7 @@
 - 当前版本：**latest**
 - 更新日志详见：[`版本更新`](./CHANGELOG.md)
 - github地址：[`github`](https://github.com/ciweigg2/foam-introduction)
+- 官网：[`foam`](http://foam.cc.cd)
 
 ---
 
