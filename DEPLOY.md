@@ -99,7 +99,7 @@ services:
       - TMDB_IMAGE_URL=https://image.tmdb.org/t/p/original
       - TZ=Asia/Shanghai
       # 代理地址
-      - HTTP_PROXY_ENABLED=true
+      - HTTP_PROXY_ENABLED=false
       - HTTP_PROXY=http://ip:port
       - HTTPS_PROXY=http://ip:port
       - NO_PROXY=172.17.0.1,127.0.0.1,localhost,foam-api-search,selenium-chrome
