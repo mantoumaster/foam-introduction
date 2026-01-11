@@ -84,7 +84,9 @@ echo
 
 # ---- misc ----
 TZ="$(prompt "时区 TZ" "Asia/Shanghai")"
-AVATARS_BASE_URL_DEFAULT="http://localhost:${API_PORT}"
+
+: "${AVATARS_BASE_URL_DEFAULT:=http://localhost:${API_PORT}}"
+
 AVATARS_BASE_URL="$(prompt "AVATARS_BASE_URL(外网可访问的地址，给头像用)" "$AVATARS_BASE_URL_DEFAULT")"
 EMBY_HUB_SEARCH_URL="$(prompt "EMBY_HUB_SEARCH_URL(可留空)" "")"
 echo
@@ -232,4 +234,3 @@ echo "停止:   docker compose stop"
 echo "启动(已停止的): docker compose start"
 echo "重启:   docker compose restart"
 echo "删除(含网络，不删数据目录): docker compose down"
-echo
