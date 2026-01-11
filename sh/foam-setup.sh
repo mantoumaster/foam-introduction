@@ -1,16 +1,36 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# ---------------- helpers ----------------
+PROMPT_FD=""
+if [[ -t 0 ]]; then
+  PROMPT_FD="0"
+elif [[ -r /dev/tty ]]; then
+  exec 3</dev/tty
+  PROMPT_FD="3"
+else
+  PROMPT_FD="" # no tty
+fi
+
 prompt() {
   local label="$1"
   local def="${2-}"
   local v=""
+
+  # 非交互：直接返回默认值/空
+  if [[ -z "${PROMPT_FD}" ]]; then
+    echo "${def}"
+    return 0
+  fi
+
   if [[ -n "$def" ]]; then
-    read -r -p "$label (default: $def): " v
+    if ! read -r -u "${PROMPT_FD}" -p "$label (default: $def): " v; then
+      v=""
+    fi
     echo "${v:-$def}"
   else
-    read -r -p "$label: " v
+    if ! read -r -u "${PROMPT_FD}" -p "$label: " v; then
+      v=""
+    fi
     echo "$v"
   fi
 }
@@ -36,7 +56,7 @@ yaml_escape() {
 }
 
 ensure_number() {
-  local v="$1"
+  local v="${1-}"
   local def="$2"
   if [[ "$v" =~ ^[0-9]+$ ]]; then
     echo "$v"
@@ -64,35 +84,50 @@ echo
 FOAM_DATA_DIR="$(prompt "Foam API 数据目录(宿主机挂载到容器 /data)" "./data")"
 MYSQL_DATA_DIR="$(prompt "MySQL 数据目录(宿主机挂载到容器 /var/lib/mysql)" "./mysql-data")"
 
+# 兜底：防止在任何情况下变量为空导致后续问题（尤其是 set -u）
+: "${FOAM_DATA_DIR:=./data}"
+: "${MYSQL_DATA_DIR:=./mysql-data}"
+
 MOUNT_HOSTS="$(prompt_bool "是否挂载 /etc/hosts 到容器(解决TMDB DNS问题)" "true")"
 HOSTS_PATH="/etc/hosts"
 if [[ "$MOUNT_HOSTS" == "true" ]]; then
   HOSTS_PATH="$(prompt "宿主机 hosts 路径" "/etc/hosts")"
+  : "${HOSTS_PATH:=/etc/hosts}"
 fi
 echo
 
 # ---- mysql ----
 MYSQL_DB="$(prompt "MySQL 数据库名" "foam-api")"
 MYSQL_ROOT_PASSWORD="$(prompt "MySQL root 密码(注意：会写入compose文件)" "78FRC#5BqnOk0ppk")"
+: "${MYSQL_DB:=foam-api}"
+: "${MYSQL_ROOT_PASSWORD:=78FRC#5BqnOk0ppk}"
 echo
 
 # ---- tmdb ----
 TMDB_APITOKEN="$(prompt "TMDB_APITOKEN" "tmdb api token")"
 TMDB_APIKEY="$(prompt "TMDB_APIKEY" "tmdb api key")"
 TMDB_IMAGE_URL="$(prompt "TMDB_IMAGE_URL" "https://image.tmdb.org/t/p/original")"
+: "${TMDB_APITOKEN:=tmdb api token}"
+: "${TMDB_APIKEY:=tmdb api key}"
+: "${TMDB_IMAGE_URL:=https://image.tmdb.org/t/p/original}"
 echo
 
 # ---- misc ----
 TZ="$(prompt "时区 TZ" "Asia/Shanghai")"
+: "${TZ:=Asia/Shanghai}"
 
+# ✅ 推荐修复：在第一次引用前保证变量一定已定义（兼容 set -u）
 : "${AVATARS_BASE_URL_DEFAULT:=http://localhost:${API_PORT}}"
 
 AVATARS_BASE_URL="$(prompt "AVATARS_BASE_URL(外网可访问的地址，给头像用)" "$AVATARS_BASE_URL_DEFAULT")"
 EMBY_HUB_SEARCH_URL="$(prompt "EMBY_HUB_SEARCH_URL(可留空)" "")"
+: "${AVATARS_BASE_URL:=${AVATARS_BASE_URL_DEFAULT}}"
+: "${EMBY_HUB_SEARCH_URL:=}"
 echo
 
 # ---- proxy ----
 HTTP_PROXY_ENABLED="$(prompt_bool "是否启用代理 HTTP_PROXY_ENABLED" "true")"
+: "${HTTP_PROXY_ENABLED:=true}"
 
 HTTP_PROXY_DEFAULT="http://ip:port"
 HTTPS_PROXY_DEFAULT="http://ip:port"
@@ -109,12 +144,19 @@ if [[ "$HTTP_PROXY_ENABLED" == "true" ]]; then
 else
   NO_PROXY="$(prompt "NO_PROXY(建议保留内网/本地)" "$NO_PROXY_DEFAULT")"
 fi
+
+: "${HTTP_PROXY:=}"
+: "${HTTPS_PROXY:=}"
+: "${NO_PROXY:=$NO_PROXY_DEFAULT}"
 echo
 
 # ---- selenium ----
 SELENIUM_PLATFORM="$(prompt "selenium-chrome platform(Apple Silicon 常用 linux/amd64)" "linux/amd64")"
 SELENIUM_MAX_SESSIONS="$(prompt "SE_NODE_MAX_SESSIONS" "4")"
 SHM_SIZE="$(prompt "shm_size(避免Chrome崩)" "2gb")"
+: "${SELENIUM_PLATFORM:=linux/amd64}"
+: "${SELENIUM_MAX_SESSIONS:=4}"
+: "${SHM_SIZE:=2gb}"
 echo
 
 # ---------------- prepare dirs ----------------
