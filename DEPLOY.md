@@ -160,9 +160,6 @@ services:
   selenium-chrome:
     image: selenium/standalone-chrome:latest
     platform: linux/amd64
-    ports:
-      - "4444:4444"
-      - "7900:7900"
     shm_size: "2gb"
     environment:
       - SE_NODE_MAX_SESSIONS=4
