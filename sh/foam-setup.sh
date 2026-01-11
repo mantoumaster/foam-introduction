@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# ---------------- defaults (先定义默认值，彻底避免 unbound) ----------------
 DEFAULT_API_PORT="8080"
 DEFAULT_WEB_PORT="8081"
 DEFAULT_MYSQL_PORT="3306"
-DEFAULT_SELENIUM_PORT="4444"
-DEFAULT_VNC_PORT="7900"
 
 DEFAULT_FOAM_DATA_DIR="./data"
 DEFAULT_MYSQL_DATA_DIR="./mysql-data"
@@ -22,7 +21,7 @@ DEFAULT_TMDB_IMAGE_URL="https://image.tmdb.org/t/p/original"
 
 DEFAULT_TZ="Asia/Shanghai"
 
-DEFAULT_HTTP_PROXY_ENABLED="true"
+DEFAULT_HTTP_PROXY_ENABLED="false"
 DEFAULT_HTTP_PROXY="http://ip:port"
 DEFAULT_HTTPS_PROXY="http://ip:port"
 DEFAULT_NO_PROXY="172.17.0.1,127.0.0.1,localhost,foam-api-search,selenium-chrome"
@@ -34,7 +33,6 @@ DEFAULT_SHM_SIZE="2gb"
 LICENSE_FILE_IN_CONTAINER="/data/license.dat"
 
 # ---------------- 关键修复：兼容 curl | bash 的交互读取 ----------------
-# 交互输入必须从 /dev/tty 读，避免 read 吃掉脚本 stdin（管道里的脚本内容）
 PROMPT_FD=""
 if [[ -r /dev/tty ]]; then
   exec 3</dev/tty
@@ -45,12 +43,12 @@ else
   PROMPT_FD="" # 无 tty：走默认值（非交互）
 fi
 
+# ---------------- helpers ----------------
 prompt() {
   local label="$1"
   local def="${2-}"
   local v=""
 
-  # 无 tty：直接返回默认值（或者空）
   if [[ -z "${PROMPT_FD}" ]]; then
     printf '%s\n' "${def}"
     return 0
@@ -99,8 +97,6 @@ ensure_number() {
 API_PORT="$DEFAULT_API_PORT"
 WEB_PORT="$DEFAULT_WEB_PORT"
 MYSQL_PORT="$DEFAULT_MYSQL_PORT"
-SELENIUM_PORT="$DEFAULT_SELENIUM_PORT"
-VNC_PORT="$DEFAULT_VNC_PORT"
 
 FOAM_DATA_DIR="$DEFAULT_FOAM_DATA_DIR"
 MYSQL_DATA_DIR="$DEFAULT_MYSQL_DATA_DIR"
@@ -116,8 +112,8 @@ TMDB_APIKEY="$DEFAULT_TMDB_APIKEY"
 TMDB_IMAGE_URL="$DEFAULT_TMDB_IMAGE_URL"
 
 TZ="$DEFAULT_TZ"
-AVATARS_BASE_URL_DEFAULT=""   # 后面根据 API_PORT 算
-AVATARS_BASE_URL=""           # 后面 prompt
+AVATARS_BASE_URL_DEFAULT=""
+AVATARS_BASE_URL=""
 EMBY_HUB_SEARCH_URL=""
 
 HTTP_PROXY_ENABLED="$DEFAULT_HTTP_PROXY_ENABLED"
@@ -137,8 +133,6 @@ echo
 API_PORT="$(ensure_number "$(prompt "Foam API 外部端口(映射到容器8080)" "$DEFAULT_API_PORT")" "$DEFAULT_API_PORT")"
 WEB_PORT="$(ensure_number "$(prompt "Foam Web 外部端口(映射到容器80)" "$DEFAULT_WEB_PORT")" "$DEFAULT_WEB_PORT")"
 MYSQL_PORT="$(ensure_number "$(prompt "MySQL 外部端口(映射到容器3306)" "$DEFAULT_MYSQL_PORT")" "$DEFAULT_MYSQL_PORT")"
-SELENIUM_PORT="$(ensure_number "$(prompt "Selenium 外部端口(映射到容器4444)" "$DEFAULT_SELENIUM_PORT")" "$DEFAULT_SELENIUM_PORT")"
-VNC_PORT="$(ensure_number "$(prompt "Selenium VNC 外部端口(映射到容器7900)" "$DEFAULT_VNC_PORT")" "$DEFAULT_VNC_PORT")"
 echo
 
 # ---- mounts ----
@@ -175,9 +169,7 @@ echo
 TZ="$(prompt "时区 TZ" "$DEFAULT_TZ")"
 : "${TZ:=$DEFAULT_TZ}"
 
-# ✅ 推荐修复：确保该变量永远已定义
 : "${AVATARS_BASE_URL_DEFAULT:=http://localhost:${API_PORT}}"
-
 AVATARS_BASE_URL="$(prompt "AVATARS_BASE_URL(外网可访问的地址，给头像用)" "$AVATARS_BASE_URL_DEFAULT")"
 EMBY_HUB_SEARCH_URL="$(prompt "EMBY_HUB_SEARCH_URL(可留空)" "")"
 : "${AVATARS_BASE_URL:=$AVATARS_BASE_URL_DEFAULT}"
@@ -301,9 +293,6 @@ ${HOSTS_VOLUME_LINE}
     container_name: selenium-chrome
     platform: "${SELENIUM_PLATFORM}"
     restart: always
-    ports:
-      - "${SELENIUM_PORT}:4444"
-      - "${VNC_PORT}:7900"
     shm_size: "${SHM_SIZE}"
     environment:
       SE_NODE_MAX_SESSIONS: "$(yaml_escape "$SELENIUM_MAX_SESSIONS")"
