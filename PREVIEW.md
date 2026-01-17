@@ -279,6 +279,37 @@
       <br/>
       <sub><b>追剧2</b></sub>
     </td>
+    <td align="center">
+      <a href="imgs/消息推送助手">
+        <img src="imgs/消息推送助手.jpg" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>消息推送助手</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/消息推送助手详情">
+        <img src="imgs/消息推送助手详情.jpg" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>消息推送助手详情</b></sub>
+    </td>
+</tr>
+
+<tr>
+    <td align="center">
+      <a href="imgs/集群用户创建">
+        <img src="imgs/集群用户创建.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>集群用户创建</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/Foam桌面端">
+        <img src="imgs/Foam桌面端.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>Foam桌面端</b></sub>
+    </td>
 </tr>
 
 </table>
