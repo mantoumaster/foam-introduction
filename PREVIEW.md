@@ -310,6 +310,13 @@
       <br/>
       <sub><b>Foam桌面端</b></sub>
     </td>
+    <td align="center">
+      <a href="imgs/统计图表">
+        <img src="imgs/统计图表.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>统计图表</b></sub>
+    </td>
 </tr>
 
 </table>
