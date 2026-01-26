@@ -317,6 +317,75 @@
       <br/>
       <sub><b>统计图表</b></sub>
     </td>
+    <td align="center">
+      <a href="imgs/播放区域地图">
+        <img src="imgs/播放区域地图.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>播放区域地图</b></sub>
+    </td>
+</tr>
+
+<tr>
+    <td align="center">
+      <a href="imgs/兑换历史">
+        <img src="imgs/兑换历史.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>兑换历史</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/兑换审批">
+        <img src="imgs/兑换审批.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>兑换审批</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/分销总览">
+        <img src="imgs/分销总览.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>分销总览</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/商品管理">
+        <img src="imgs/商品管理.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>商品管理</b></sub>
+    </td>
+</tr>
+
+<tr>
+    <td align="center">
+      <a href="imgs/我要进货">
+        <img src="imgs/我要进货.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>我要进货</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/积分商城">
+        <img src="imgs/积分商城.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>积分商城</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/进货审批">
+        <img src="imgs/进货审批.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>进货审批</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/邀请记录">
+        <img src="imgs/邀请记录.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>邀请记录</b></sub>
+    </td>
 </tr>
 
 </table>
