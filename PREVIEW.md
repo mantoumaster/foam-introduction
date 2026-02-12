@@ -403,6 +403,51 @@
       <br/>
       <sub><b>求片中心影片预告</b></sub>
     </td>
+    <td align="center">
+      <a href="imgs/自动化订阅1">
+        <img src="imgs/自动化订阅1.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>自动化订阅1</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/自动化订阅2">
+        <img src="imgs/自动化订阅2.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>自动化订阅2</b></sub>
+    </td>
+</tr>
+
+<tr>
+    <td align="center">
+      <a href="imgs/自动化订阅3">
+        <img src="imgs/自动化订阅3.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>自动化订阅3</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/自动化订阅4">
+        <img src="imgs/自动化订阅4.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>自动化订阅4</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/自动化订阅5">
+        <img src="imgs/自动化订阅5.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>自动化订阅5</b></sub>
+    </td>
+    <td align="center">
+      <a href="imgs/自动化订阅6">
+        <img src="imgs/自动化订阅6.png" width="210" style="border-radius:14px;" />
+      </a>
+      <br/>
+      <sub><b>自动化订阅6</b></sub>
+    </td>
 </tr>
 
 </table>
