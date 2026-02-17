@@ -112,6 +112,8 @@ services:
       - SELENIUM_REMOTE_URL=http://selenium-chrome:4444/wd/hub
       - REDIS_HOST=redis
       - REDIS_PORT=6379
+      - REDIS_PWD=123456
+      - REDIS_DB=0
     networks:
       - foam-network
     links:
@@ -181,6 +183,8 @@ services:
       - --save
       - "60"
       - "1"
+      - --requirepass
+      - "123456"
     volumes:
       - ./redis-data:/data
     networks:
