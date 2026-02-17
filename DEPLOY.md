@@ -110,14 +110,18 @@ services:
       #上传头像访问地址 也就是8080端口 需要外网能访问的ip
       - AVATARS_BASE_URL=http://localhost:8080
       - SELENIUM_REMOTE_URL=http://selenium-chrome:4444/wd/hub
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
     networks:
       - foam-network
     links:
       - db
       - selenium-chrome
+      - redis
     depends_on:
       - db
       - selenium-chrome
+      - redis
 
   db:
     image: mysql:8.4.6
@@ -163,6 +167,22 @@ services:
     shm_size: "2gb"
     environment:
       - SE_NODE_MAX_SESSIONS=4
+    networks:
+      - foam-network
+      
+  redis:
+    image: redis:7.4
+    container_name: redis_container
+    restart: always
+    command:
+      - redis-server
+      - --appendonly
+      - "yes"
+      - --save
+      - "60"
+      - "1"
+    volumes:
+      - ./redis-data:/data
     networks:
       - foam-network
 

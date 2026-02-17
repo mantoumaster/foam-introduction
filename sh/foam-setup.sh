@@ -245,12 +245,15 @@ ${HOSTS_VOLUME_LINE}
       EMBY_HUB_SEARCH_URL: "$(yaml_escape "$EMBY_HUB_SEARCH_URL")"
       AVATARS_BASE_URL: "$(yaml_escape "$AVATARS_BASE_URL")"
       SELENIUM_REMOTE_URL: "http://selenium-chrome:4444/wd/hub"
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
 
     networks:
       - foam-network
     depends_on:
       - db
       - selenium-chrome
+      - redis
 
   db:
     image: mysql:8.4.6
@@ -296,6 +299,22 @@ ${HOSTS_VOLUME_LINE}
     shm_size: "${SHM_SIZE}"
     environment:
       SE_NODE_MAX_SESSIONS: "$(yaml_escape "$SELENIUM_MAX_SESSIONS")"
+    networks:
+      - foam-network
+
+  redis:
+    image: redis:7.4
+    container_name: redis_container
+    restart: always
+    command:
+      - redis-server
+      - --appendonly
+      - "yes"
+      - --save
+      - "60"
+      - "1"
+    volumes:
+      - ./redis-data:/data
     networks:
       - foam-network
 
